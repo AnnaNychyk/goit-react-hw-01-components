@@ -5,6 +5,7 @@ function App() {
   return (
     <div>
       <Profile
+        key={user.tag}
         username={user.username}
         tag={user.tag}
         location={user.location}
