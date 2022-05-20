@@ -1,31 +1,26 @@
 import styles from "./Statistics.module.css";
 import PropTypes from "prop-types";
 
-function Statistics({ data }) {
+function Statistics({ stats }) {
   return (
-    <section className="statistics">
+    <section className={styles.statistics}>
       <h2 className="title">Upload stats</h2>
-
-      <ul className="stat-list">
-        <li className="item">
-          <span className="label">.docx</span>
-          <span className="percentage">4%</span>
-        </li>
-        <li className="item">
-          <span className="label">.mp3</span>
-          <span className="percentage">14%</span>
-        </li>
-        <li className="item">
-          <span className="label">.pdf</span>
-          <span className="percentage">41%</span>
-        </li>
-        <li className="item">
-          <span className="label">.mp4</span>
-          <span className="percentage">12%</span>
-        </li>
+      <ul className={styles.statList}>
+        {stats.map((item) => (
+          <li className="item">
+            <span className="label">{item.label}</span>
+            <span className="percentage">{item.percentage}%</span>
+          </li>
+        ))}
       </ul>
     </section>
   );
 }
+
+Statistics.propTypes = {
+  username: PropTypes.string,
+  label: PropTypes.string,
+  percentage: PropTypes.number,
+};
 
 export default Statistics;
