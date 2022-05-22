@@ -14,8 +14,8 @@ function App() {
         avatar={user.avatar}
         stats={user.stats}
       />
-
       <Statistics key={data.id} title="Upload stats" stats={data} />
+      <Statistics stats={data} />;
     </div>
   );
 }
