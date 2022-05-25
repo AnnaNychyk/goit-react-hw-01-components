@@ -1,19 +1,13 @@
 import styles from "./FriendList.module.css";
+import FriendListItem from "./FriendListItem";
 import PropTypes from "prop-types";
 
 function FriendList({ friends }) {
   return (
     <ul className="friend-list">
-      {friends.map((friend) => (
-        <li className="item">
-          <span className="status">{friend.isOnline}</span>
-          <img
-            className="avatar"
-            src={friend.avatar}
-            alt="User avatar"
-            width="48"
-          />
-          <p className="name">{friend.name}</p>
+      {friends.map(({ isOnline, avatar, name, id }) => (
+        <li className="item" key={id}>
+          <FriendListItem isOnline={isOnline} avatar={avatar} name={name} />
         </li>
       ))}
     </ul>
@@ -21,9 +15,7 @@ function FriendList({ friends }) {
 }
 
 FriendList.propTypes = {
-  title: PropTypes.string,
-  label: PropTypes.string,
-  percentage: PropTypes.number,
+  id: PropTypes.number,
 };
 
 export default FriendList;

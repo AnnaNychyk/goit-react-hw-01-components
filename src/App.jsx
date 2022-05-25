@@ -18,7 +18,7 @@ function App() {
       />
       <Statistics title="Upload stats" stats={data} />
       <Statistics stats={data} />
-      {/* <FriendList key={friends.id} friends={friends} /> */}
+      <FriendList friends={friends} />
     </div>
   );
 }
