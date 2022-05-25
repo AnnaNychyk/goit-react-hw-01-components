@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 
 function FriendList({ friends }) {
   return (
-    <ul className="friend-list">
+    <ul className={styles.friendList}>
       {friends.map(({ isOnline, avatar, name, id }) => (
-        <li className="item" key={id}>
+        <li className={styles.item} key={id}>
           <FriendListItem isOnline={isOnline} avatar={avatar} name={name} />
         </li>
       ))}
