@@ -1,0 +1,28 @@
+.table {
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 600px;
+  text-align: center;
+  background-color: rgb(222, 222, 222);
+  border-radius: 3px;
+}
+
+.rowHead {
+  height: 30px;
+  background-color: rgb(0, 194, 211);
+  text-transform: uppercase;
+}
+
+.rowBody {
+  height: 30px;
+  color: rgb(88, 88, 88);
+}
+
+.rowBody:nth-child(even) {
+  background-color: rgb(197, 197, 197);
+}
+
+.rowBody:nth-child(odd) {
+  background-color: rgb(255, 255, 255);
+}

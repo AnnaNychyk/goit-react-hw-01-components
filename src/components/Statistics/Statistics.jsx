@@ -8,9 +8,7 @@ function Statistics({ title = "", stats }) {
       {title && <h2 className={styles.title}>{title}</h2>}
       <ul className={styles.statList}>
         {stats.map(({ id, label, percentage }) => (
-          <li key={id}>
-            <StatisticItem label={label} percentage={percentage} />
-          </li>
+          <StatisticItem key={id} label={label} percentage={percentage} />
         ))}
       </ul>
     </section>

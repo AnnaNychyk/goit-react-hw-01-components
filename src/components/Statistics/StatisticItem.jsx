@@ -3,10 +3,10 @@ import PropTypes from "prop-types";
 
 function StatisticItem({ label, percentage }) {
   return (
-    <div className={styles.item}>
+    <li className={styles.item}>
       <span className={styles.label}>{label}</span>
       <span className={styles.percentage}>{percentage}%</span>
-    </div>
+    </li>
   );
 }
 

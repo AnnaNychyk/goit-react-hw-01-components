@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 function FriendListItem({ isOnline, avatar, name }) {
   return (
-    <div className={styles.itemDiv}>
+    <li className={styles.item}>
       {isOnline ? (
         <span className={styles.statusOn}>{isOnline}</span>
       ) : (
@@ -16,7 +16,7 @@ function FriendListItem({ isOnline, avatar, name }) {
         width="48"
       />
       <p className="name">{name}</p>
-    </div>
+    </li>
   );
 }
 
